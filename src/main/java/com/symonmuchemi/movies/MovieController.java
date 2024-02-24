@@ -16,6 +16,6 @@ public class MovieController {
     private MovieService movieService;
     @GetMapping
     public ResponseEntity<List<Movie>> getAllMovies(){
-        return new ResponseEntity<List<Movie>>(movieService.allMovies(), HttpStatus.OK);
+        return new ResponseEntity<>(movieService.allMovies(), HttpStatus.OK);
     }
 }
