@@ -22,7 +22,7 @@ public class ReviewService {
           */
         mongoTemplate.update(Movie.class)
                 .matching(Criteria.where("imdbId").is(imdbId))// Specifies which movie to update
-                .apply(new Update().push("reviewsId").value(review))
+                .apply(new Update().push("reviewIds").value(review))
                 .first();
 
         return review;
